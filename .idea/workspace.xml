@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1981d74f-42e3-480c-89db-c5f2c4b355d1" name="Default Changelist" comment="" />
+    <list default="true" id="1981d74f-42e3-480c-89db-c5f2c4b355d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CheckBalance.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CreateAccounts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stellar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stellarTools.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allTest/account1.go" beforeDir="false" afterPath="$PROJECT_DIR$/allTest/account1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allTest/account2.go" beforeDir="false" afterPath="$PROJECT_DIR$/allTest/account2.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allTest/createAnAccount.go" beforeDir="false" afterPath="$PROJECT_DIR$/allTest/createAnAccount.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allTest/smartes.go" beforeDir="false" afterPath="$PROJECT_DIR$/allTest/smartes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createTestAccount/newAccount.go" beforeDir="false" afterPath="$PROJECT_DIR$/createTestAccount/newAccount.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettingAccountDetails/accountBalances.go" beforeDir="false" afterPath="$PROJECT_DIR$/gettingAccountDetails/accountBalances.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/receivePayments/account1Receiver.go" beforeDir="false" afterPath="$PROJECT_DIR$/receivePayments/account1Receiver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/receivePayments/account2Receiver.go" beforeDir="false" afterPath="$PROJECT_DIR$/receivePayments/account2Receiver.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,71 +62,88 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1006798436">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="go" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Go" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="go" value="250" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Go" value="250" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/allTest/account1.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#14#132#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/changeTrust/buildTrustLine.go">
+        <entry file="file://$PROJECT_DIR$/CheckBalance.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/allTest/account2.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="342">
+              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
               <folding>
-                <element signature="e#14#132#0" expanded="true" />
+                <element signature="e#14#91#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/receivePayments/account1Receiver.go">
+        <entry file="file://$PROJECT_DIR$/gettingAccountDetails/accountBalances.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/receivePayments/account2Receiver.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="152">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
               <folding>
-                <element signature="e#14#138#0" expanded="true" />
+                <element signature="e#31#96#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildingTransaction/sendTransaction.go">
+        <entry file="file://$PROJECT_DIR$/CreateAccounts.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <state relative-caret-position="-228">
+              <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
               <folding>
-                <element signature="e#29#151#0" expanded="true" />
+                <element signature="e#14#96#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/createTestAccount/newAccount.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -142,20 +173,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/allTest/smartes.go" />
-        <option value="$PROJECT_DIR$/allTest/createAnAccount.go" />
         <option value="$PROJECT_DIR$/allTest/buildTransation.go" />
-        <option value="$PROJECT_DIR$/gettingAccountDetails/accountBalances.go" />
         <option value="$PROJECT_DIR$/receivePayments/receivePayments.go" />
-        <option value="$PROJECT_DIR$/createTestAccount/newAccount.go" />
         <option value="$PROJECT_DIR$/createSeed/createKeys.go" />
-        <option value="$PROJECT_DIR$/allTest/account1.go" />
-        <option value="$PROJECT_DIR$/allTest/account2.go" />
-        <option value="$PROJECT_DIR$/receivePayments/account1Receiver.go" />
-        <option value="$PROJECT_DIR$/receivePayments/account2Receiver.go" />
         <option value="$PROJECT_DIR$/changeTrust/buildTrustLine.go" />
         <option value="$PROJECT_DIR$/buildingTransaction/sendTransaction.go" />
         <option value="$PROJECT_DIR$/createAccounts.go" />
+        <option value="$PROJECT_DIR$/receivePayments/account2Receiver.go" />
+        <option value="$PROJECT_DIR$/allTest/account1.go" />
+        <option value="$PROJECT_DIR$/allTest/account2.go" />
+        <option value="$PROJECT_DIR$/receivePayments/account1Receiver.go" />
+        <option value="$PROJECT_DIR$/createTestAccount/newAccount.go" />
+        <option value="$PROJECT_DIR$/gettingAccountDetails/accountBalances.go" />
+        <option value="$PROJECT_DIR$/allTest/smartes.go" />
+        <option value="$PROJECT_DIR$/allTest/createAnAccount.go" />
+        <option value="$PROJECT_DIR$/CreateAccounts.go" />
+        <option value="$PROJECT_DIR$/CheckBalance.go" />
       </list>
     </option>
   </component>
@@ -166,9 +199,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="509" />
-    <option name="y" value="42" />
-    <option name="width" value="1079" />
+    <option name="x" value="661" />
+    <option name="y" value="120" />
+    <option name="width" value="1069" />
     <option name="height" value="858" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -201,42 +234,32 @@
         <subPane>
           <expand>
             <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
+              <item name="stellarTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stellarTools" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
+              <item name="stellarTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stellarTools" type="462c0819:PsiDirectoryNode" />
               <item name="allTest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
-              <item name="buildingTransaction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
-              <item name="changeTrust" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
+              <item name="stellarTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stellarTools" type="462c0819:PsiDirectoryNode" />
               <item name="createSeed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
+              <item name="stellarTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stellarTools" type="462c0819:PsiDirectoryNode" />
               <item name="createTestAccount" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
+              <item name="stellarTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stellarTools" type="462c0819:PsiDirectoryNode" />
               <item name="gettingAccountDetails" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="stellar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stellar" type="462c0819:PsiDirectoryNode" />
+              <item name="stellarTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stellarTools" type="462c0819:PsiDirectoryNode" />
               <item name="receivePayments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -251,7 +274,7 @@
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -267,9 +290,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build account1.go">
+  <component name="RunManager" selected="Go Build.go build CheckBalance.go">
+    <configuration name="go build CheckBalance.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="stellarTools" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/CheckBalance.go" />
+      <package value="github.com/CoderShiun/stellarTools" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build CreateAccounts.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="stellarTools" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/CreateAccounts.go" />
+      <package value="github.com/CoderShiun/stellarTools" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build account1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="stellar" />
+      <module name="stellarTools" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/allTest/account1.go" />
@@ -277,17 +318,8 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build account2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="stellar" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/allTest/account2.go" />
-      <package value="github.com/CoderShiun/stellar" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build buildTrustLine.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="stellar" />
+      <module name="stellarTools" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/changeTrust/buildTrustLine.go" />
@@ -296,7 +328,7 @@
       <method v="2" />
     </configuration>
     <configuration name="go build createAnAccount.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="stellar" />
+      <module name="stellarTools" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/allTest/createAnAccount.go" />
@@ -304,29 +336,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build newAccount.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="stellar" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/createTestAccount/newAccount.go" />
-      <package value="github.com/CoderShiun/stellar" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Go Build.go build createAnAccount.go" />
       <item itemvalue="Go Build.go build account1.go" />
-      <item itemvalue="Go Build.go build account2.go" />
-      <item itemvalue="Go Build.go build newAccount.go" />
       <item itemvalue="Go Build.go build buildTrustLine.go" />
+      <item itemvalue="Go Build.go build CreateAccounts.go" />
+      <item itemvalue="Go Build.go build CheckBalance.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build CheckBalance.go" />
+        <item itemvalue="Go Build.go build CreateAccounts.go" />
         <item itemvalue="Go Build.go build account1.go" />
         <item itemvalue="Go Build.go build buildTrustLine.go" />
         <item itemvalue="Go Build.go build createAnAccount.go" />
-        <item itemvalue="Go Build.go build account2.go" />
-        <item itemvalue="Go Build.go build newAccount.go" />
       </list>
     </recent_temporary>
   </component>
@@ -334,12 +357,12 @@
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2131809" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22057834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29916897" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32290184" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28531855" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -432,101 +455,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/allTest/smartes.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="65" lean-forward="true" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/allTest/buildTransation.go" />
     <entry file="file://$PROJECT_DIR$/receivePayments/receivePayments.go" />
-    <entry file="file://$PROJECT_DIR$/createTestAccount/newAccount.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createSeed/createKeys.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gettingAccountDetails/accountBalances.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/allTest/createAnAccount.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="219" lean-forward="true" selection-start-line="219" selection-end-line="219" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/createAccounts.go" />
     <entry file="file://$PROJECT_DIR$/allTest/account2.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#14#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/receivePayments/account1Receiver.go">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/receivePayments/account2Receiver.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#14#138#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buildingTransaction/sendTransaction.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        <state relative-caret-position="437">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changeTrust/buildTrustLine.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createSeed/createKeys.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allTest/smartes.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createTestAccount/newAccount.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allTest/createAnAccount.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1724">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
-            <element signature="e#29#151#0" expanded="true" />
+            <element signature="e#14#212#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allTest/account1.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="76">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/receivePayments/account1Receiver.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CreateAccounts.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
           <folding>
-            <element signature="e#14#132#0" expanded="true" />
+            <element signature="e#14#96#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createAccounts.go">
+    <entry file="file://$PROJECT_DIR$/gettingAccountDetails/accountBalances.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        <state relative-caret-position="152">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#31#96#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changeTrust/buildTrustLine.go">
+    <entry file="file://$PROJECT_DIR$/CheckBalance.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="342">
+          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="e#14#91#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

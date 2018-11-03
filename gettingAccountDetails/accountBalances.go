@@ -3,7 +3,6 @@ package gettingAccountDetails
 import (
 	"fmt"
 	"log"
-
 	"github.com/stellar/go/clients/horizon"
 )
 

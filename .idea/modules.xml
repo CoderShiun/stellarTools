@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/stellar.iml" filepath="$PROJECT_DIR$/.idea/stellar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/stellarTools.iml" filepath="$PROJECT_DIR$/.idea/stellarTools.iml" />
     </modules>
   </component>
 </project>

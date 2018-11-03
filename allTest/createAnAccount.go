@@ -12,55 +12,55 @@ import (
 	"net/http"
 )
 
-var mySeed, myAddress, myAccount string
-var yourSeed, yourAddress, yourAccount string
+var account1_Pub, account1_Pri, account1 string
+var account2_Pub, account2_Pri, account2 string
 
 func main() {
 	/**
-	Get the Seed and Key for myAccount
+	Get the Seed and Key for account1
 	 */
 	pair, err := keypair.Random()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	log.Println("mySeed: ", pair.Seed())
+	log.Println("account1_Pub: ", pair.Seed())
 	// SAV76USXIJOBMEQXPANUOQM6F5LIOTLPDIDVRJBFFE2MDJXG24TAPUU7
-	log.Println("myAddress: ", pair.Address())
+	log.Println("account1_Pri: ", pair.Address())
 	// GCFXHS4GXL6BVUCXBWXGTITROWLVYXQKQLF4YH5O5JT3YZXCYPAFBJZB
 	log.Println()
 
-	mySeed = pair.Seed()
-	myAddress = pair.Address()
+	account1_Pub = pair.Seed()
+	account1_Pri = pair.Address()
 
 	/*
 	####################################
 	 */
 	/**
-   Get the Seed and Key for yourAccount
+   Get the Seed and Key for account2
 	*/
 	pair2, err := keypair.Random()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	log.Println("yourSeed: ", pair2.Seed())
+	log.Println("account2_Pub: ", pair2.Seed())
 	// SAV76USXIJOBMEQXPANUOQM6F5LIOTLPDIDVRJBFFE2MDJXG24TAPUU7
-	log.Println("yourAddress: ", pair2.Address())
+	log.Println("account2_Pri: ", pair2.Address())
 	// GCFXHS4GXL6BVUCXBWXGTITROWLVYXQKQLF4YH5O5JT3YZXCYPAFBJZB
 	log.Println()
 
-	yourSeed = pair.Seed()
-	yourAddress = pair.Address()
+	account2_Pub = pair.Seed()
+	account2_Pri = pair.Address()
 
 	/*#############################################################################################*/
 	/**
-	Create myAccount
+	Create account1
 	 */
 	// pair is the pair that was generated from previous example, or create a pair based on
 	// existing keys.
 	//address := pair.Address()
-	rresp, err := http.Get("https://friendbot.stellar.org/?addr=" + myAddress)
+	rresp, err := http.Get("https://friendbot.stellar.org/?addr=" + account1_Pri)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -70,18 +70,18 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("myAccount ist: ", string(body))
-	myAccount = string(body)
+	fmt.Println("account1 ist: ", string(body))
+	account1 = string(body)
 	fmt.Println()
 	/*#############################################################################################*/
 
 	/**
-	Create yourAccount
+	Create account2
 	 */
 	// pair is the pair that was generated from previous example, or create a pair based on
 	// existing keys.
 	//address := pair.Address()
-	rresp2, err := http.Get("https://friendbot.stellar.org/?addr=" + yourAddress)
+	rresp2, err := http.Get("https://friendbot.stellar.org/?addr=" + account2_Pri)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -91,24 +91,24 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("yourAccount ist: ", string(body2))
-	yourAccount = string(body2)
+	fmt.Println("account2 ist: ", string(body2))
+	account2 = string(body2)
 	fmt.Println()
 	/*
 	##############################################################
 	 */
 	/**
-	Check the Balance for myAccount
+	Check the Balance for account1
 	 */
-	account, err := horizon.DefaultTestNetClient.LoadAccount(myAddress)
+	account, err := horizon.DefaultTestNetClient.LoadAccount(account1_Pri)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Balances for myAccount:", myAddress)
+	fmt.Println("Balances for account1:", account1_Pri)
 
 	for _, balance := range account.Balances {
-		log.Println("myAccount balance: ", balance)
+		log.Println("account1 balance: ", balance)
 		//fmt.Printf("Balance Type = %T", &balance)
 	}
 	fmt.Println()
@@ -117,17 +117,17 @@ func main() {
 	##############################################################
 	 */
 	/**
-	Check the Balance for yourAccount
+	Check the Balance for account2
 	 */
-	account2, err := horizon.DefaultTestNetClient.LoadAccount(yourAddress)
+	account2, err := horizon.DefaultTestNetClient.LoadAccount(account2_Pri)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Balances for yourAccount:", yourAddress)
+	fmt.Println("Balances for account2:", account2_Pri)
 
 	for _, balance := range account2.Balances {
-		log.Println("yourAccount balance: ", balance)
+		log.Println("account2 balance: ", balance)
 		//fmt.Printf("Balance Type = %T", &balance)
 	}
 	fmt.Println()
@@ -138,7 +138,7 @@ func main() {
 	//destination := "GCWMDLBZV5NZQHUJ3Z4OEHRLAHSLUUUIM3BITFGQVJMSYKJ5DGR4UEGM"
 
 	// Make sure destination account exists
-	if _, err := horizon.DefaultTestNetClient.LoadAccount(myAddress); err != nil {
+	if _, err := horizon.DefaultTestNetClient.LoadAccount(account1_Pri); err != nil {
 		panic(err)
 	}
 
@@ -147,10 +147,10 @@ func main() {
 
 	tx, err := build.Transaction(
 		build.TestNetwork,
-		build.SourceAccount{mySeed},
+		build.SourceAccount{account1_Pub},
 		build.AutoSequence{horizon.DefaultTestNetClient},
 		build.Payment(
-			build.Destination{yourAddress},
+			build.Destination{account2_Pri},
 			build.NativeAmount{"10"},
 		),
 	)
@@ -160,7 +160,7 @@ func main() {
 	}
 
 	// Sign the transaction to prove you are actually the person sending it.
-	txe, err := tx.Sign(mySeed)
+	txe, err := tx.Sign(account1_Pub)
 	if err != nil {
 		panic(err)
 	}
@@ -189,7 +189,7 @@ func main() {
 
 	fmt.Println("Waiting for a payment...")
 
-	esrr := horizon.DefaultTestNetClient.StreamPayments(ctx, yourAddress, &cursor, func(payment horizon.Payment) {
+	esrr := horizon.DefaultTestNetClient.StreamPayments(ctx, account2_Pri, &cursor, func(payment horizon.Payment) {
 		fmt.Println("Payment type", payment.Type)
 		fmt.Println("Payment Paging Token", payment.PagingToken)
 		fmt.Println("Payment From", payment.From)
@@ -210,13 +210,13 @@ func main() {
 	/*
 	############################################
 	 */
-	/*Check the Balance of myAccount again*/
-	account3, err := horizon.DefaultTestNetClient.LoadAccount(myAddress)
+	/*Check the Balance of account1 again*/
+	account3, err := horizon.DefaultTestNetClient.LoadAccount(account1_Pri)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Balances for account:", myAccount)
+	fmt.Println("Balances for account:", account2)
 
 	for _, balance := range account3.Balances {
 		log.Println("The balance: ", balance)
@@ -226,13 +226,13 @@ func main() {
 	/*
 	############################################
 	 */
-	/*Check the Balance of myAccount again*/
-	account4, err := horizon.DefaultTestNetClient.LoadAccount(myAddress)
+	/*Check the Balance of account1 again*/
+	account4, err := horizon.DefaultTestNetClient.LoadAccount(account1_Pri)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Balances for account:", yourAccount)
+	fmt.Println("Balances for account:", account2)
 
 	for _, balance := range account4.Balances {
 		log.Println("The balance: ", balance)

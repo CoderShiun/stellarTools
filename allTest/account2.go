@@ -1,15 +1,15 @@
 package main
 
 import (
-	"github.com/CoderShiun/stellar/buildingTransaction"
-	"github.com/CoderShiun/stellar/gettingAccountDetails"
+	"github.com/CoderShiun/stellarTools/buildingTransaction"
+	"github.com/CoderShiun/stellarTools/gettingAccountDetails"
 )
 
 var Seed2 = "SCBQ7X2ZYESAYCC2C3V3HMAGLFIW5OGW5MOK4F4N27U7G5HVPJQGZG2P"
 var Key2 = "GBU5MUNK3HJGF6FPUCVU6XWZEIW22T6LRAPE23EABUIFOJYDMQQZCKKU"
 
 func main() {
-	//Check the Balance for myAccount
+	//Check the Balance for account1
 	gettingAccountDetails.GetBalance(Key2)
 
 	//	send Transaction
