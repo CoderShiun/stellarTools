@@ -1,4 +1,4 @@
-package changeTrust
+package setOptions
 
 import (
 	"fmt"
@@ -6,18 +6,25 @@ import (
 	"github.com/stellar/go/clients/horizon"
 )
 
-
-func BuildTrustLine(sourcePub, sourcePri string) {
-
-
+func SetSecureMasterKey(pubKey, priKey string) {
 	tx, err := build.Transaction(
-		//build.SourceAccount{"GCM3B4YCWQJFNJWGWNYECV6IU4F7WFHH6CGUCTLBAW4XXIKRORP53HXI"},
-		build.SourceAccount{sourcePub},
+		build.SourceAccount{pubKey},
 		build.AutoSequence{horizon.DefaultTestNetClient},
 		//build.Sequence{1},
 		build.TestNetwork,
-		build.Trust("MXC", "GD4HUK74YYBT72FDNTIVF3OBHGICU74AWRFUGZOM7CUJV7FLASFYAXXO"),
-		//build.ChangeTrust(),
+		build.SetOptions(
+			//build.InflationDest(),
+			//build.SetAuthRequired(),
+			//build.SetAuthRevocable(),
+			//build.SetAuthImmutable(),
+			//build.ClearAuthRequired(),
+			//build.ClearAuthRevocable(),
+			//build.ClearAuthImmutable(),
+			build.MasterWeight(1),
+			build.SetThresholds(0, 0, 2),
+			//build.HomeDomain(),
+			build.AddSigner("GCMXW6TWZIT4GHMEN2YE33MJT4OF3R4PKCVR77Z7MHDD4C5SWUDJCA2L", 2),
+		),
 	)
 
 	if err != nil {
@@ -25,8 +32,7 @@ func BuildTrustLine(sourcePub, sourcePri string) {
 		return
 	}
 
-	//txe, err := tx.Sign("SBOT4Q7JJ33FKFLJMBWGLSCXE3FY6J2AEBJ7P2MFPEBVKJB2LRGHFY3P")
-	txe, err := tx.Sign(sourcePri)
+	txe, err := tx.Sign(priKey)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -40,6 +46,7 @@ func BuildTrustLine(sourcePub, sourcePri string) {
 	}
 
 	fmt.Printf("tx base64: %s", txeB64)
+	fmt.Println()
 
 	// And finally, send it off to Stellar!
 	resp, err := horizon.DefaultTestNetClient.SubmitTransaction(txeB64)
@@ -47,8 +54,7 @@ func BuildTrustLine(sourcePub, sourcePri string) {
 		panic(err)
 	}
 
-	fmt.Println()
-	fmt.Println("Successful Trust Line:")
+	fmt.Println("Master security key successful: ")
 	fmt.Println("Ledger:", resp.Ledger)
 	fmt.Println("Hash:", resp.Hash)
 }

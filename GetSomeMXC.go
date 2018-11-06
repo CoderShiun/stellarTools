@@ -1,21 +1,24 @@
-package buildingTransaction
+package main
 
 import (
 	"fmt"
+	"github.com/CoderShiun/stellarTools/getFromKyeboard"
+	"github.com/CoderShiun/stellarTools/gettingAccountDetails"
 	"github.com/stellar/go/build"
 	"github.com/stellar/go/clients/horizon"
 	"github.com/stellar/go/network"
 )
 
-func SendTransaction(source, destination string)  {
+var distributorPri = "SD64I4OCIUPT6UONUCOT7WVIVOVQNFJI6FLO2NIO5CUDBPXQMUUZSDJA"
+var distributorPub = "GDZPSKJSFLW4HF77OJFYB3ANCG3CF2PHUZ3YRG5PHPTNF7ZLYGNV7EPV"
 
-	//MXCissuer := "GAPYC3DNGCYC4TJYCVPSLC476WYVNDTDJ2XOKDJWITCF3XYDSDT2FLXL"
-	//MXC01 := build.Asset{Code:"MXC01",Native:true,Issuer:"GAPYC3DNGCYC4TJYCVPSLC476WYVNDTDJ2XOKDJWITCF3XYDSDT2FLXL"}
-	//OP := build.Payment()
-
+func main() {
+	fmt.Println("Please enter your PublicKey: ")
+	publicKey := getFromKyeboard.FromKeyboard()
+	//buildingTransaction.SendMXC(publicKey)
 
 	// Make sure destination account exists
-	if _, err := horizon.DefaultTestNetClient.LoadAccount(destination); err != nil {
+	if _, err := horizon.DefaultTestNetClient.LoadAccount(publicKey); err != nil {
 		panic(err)
 	}
 
@@ -37,10 +40,10 @@ func SendTransaction(source, destination string)  {
 
 	tx, err := build.Transaction(
 		build.TestNetwork,
-		build.SourceAccount{source},
+		build.SourceAccount{  distributorPub},
 		build.AutoSequence{horizon.DefaultTestNetClient},
 		build.Payment(
-			build.Destination{destination},
+			build.Destination{publicKey},
 			//build.SourceAccount{"GAPYC3DNGCYC4TJYCVPSLC476WYVNDTDJ2XOKDJWITCF3XYDSDT2FLXL"},
 			//build.Asset{Code:"MXC01",Issuer:"GAPYC3DNGCYC4TJYCVPSLC476WYVNDTDJ2XOKDJWITCF3XYDSDT2FLXL"},
 			//build.CreditAsset("MXC01","GDXFS34FXPGM3DNQIHQBPFP3DP32XNJX25FJI7OPICA7IQFQGJHFVMJT"),
@@ -56,7 +59,7 @@ func SendTransaction(source, destination string)  {
 	}
 
 	// Sign the transaction to prove you are actually the person sending it.
-	txe, err := tx.Sign(source)
+	txe, err := tx.Sign(distributorPri)
 	if err != nil {
 		panic(err)
 	}
@@ -78,4 +81,8 @@ func SendTransaction(source, destination string)  {
 	fmt.Println("Successful Transaction:")
 	fmt.Println("Ledger:", resp.Ledger)
 	fmt.Println("Hash:", resp.Hash)
+
+
+	fmt.Println("Your Account Balance: ")
+	gettingAccountDetails.GetBalance(publicKey)
 }

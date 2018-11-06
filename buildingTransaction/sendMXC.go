@@ -7,7 +7,10 @@ import (
 	"github.com/stellar/go/network"
 )
 
-func SendTransaction(source, destination string)  {
+//var distributorPri = "SD64I4OCIUPT6UONUCOT7WVIVOVQNFJI6FLO2NIO5CUDBPXQMUUZSDJA"
+//var distributorPub = "GDZPSKJSFLW4HF77OJFYB3ANCG3CF2PHUZ3YRG5PHPTNF7ZLYGNV7EPV"
+
+func SendMXC(sourcePub, sourcePri, amount, destination string)  {
 
 	//MXCissuer := "GAPYC3DNGCYC4TJYCVPSLC476WYVNDTDJ2XOKDJWITCF3XYDSDT2FLXL"
 	//MXC01 := build.Asset{Code:"MXC01",Native:true,Issuer:"GAPYC3DNGCYC4TJYCVPSLC476WYVNDTDJ2XOKDJWITCF3XYDSDT2FLXL"}
@@ -37,7 +40,7 @@ func SendTransaction(source, destination string)  {
 
 	tx, err := build.Transaction(
 		build.TestNetwork,
-		build.SourceAccount{source},
+		build.SourceAccount{  sourcePub},
 		build.AutoSequence{horizon.DefaultTestNetClient},
 		build.Payment(
 			build.Destination{destination},
@@ -45,7 +48,7 @@ func SendTransaction(source, destination string)  {
 			//build.Asset{Code:"MXC01",Issuer:"GAPYC3DNGCYC4TJYCVPSLC476WYVNDTDJ2XOKDJWITCF3XYDSDT2FLXL"},
 			//build.CreditAsset("MXC01","GDXFS34FXPGM3DNQIHQBPFP3DP32XNJX25FJI7OPICA7IQFQGJHFVMJT"),
 			//build.CreditAsset("MXC","GD4HUK74YYBT72FDNTIVF3OBHGICU74AWRFUGZOM7CUJV7FLASFYAXXO"),
-			build.CreditAmount{Code:"MXC",Issuer:"GD4HUK74YYBT72FDNTIVF3OBHGICU74AWRFUGZOM7CUJV7FLASFYAXXO",Amount:"200"},
+			build.CreditAmount{Code:"MXC",Issuer:"GD4HUK74YYBT72FDNTIVF3OBHGICU74AWRFUGZOM7CUJV7FLASFYAXXO",Amount:amount},
 			//build.Amount(50),
 			//build.NativeAmount{"50"},
 		),
@@ -56,7 +59,7 @@ func SendTransaction(source, destination string)  {
 	}
 
 	// Sign the transaction to prove you are actually the person sending it.
-	txe, err := tx.Sign(source)
+	txe, err := tx.Sign(sourcePri)
 	if err != nil {
 		panic(err)
 	}
@@ -79,3 +82,4 @@ func SendTransaction(source, destination string)  {
 	fmt.Println("Ledger:", resp.Ledger)
 	fmt.Println("Hash:", resp.Hash)
 }
+
