@@ -1,7 +1,7 @@
 package createTestAccount
 
 import (
-	"github.com/CoderShiun/stellarTools/createSeed"
+	"stellarTools/createSeed"
 	"net/http"
 	"io/ioutil"
 	"log"

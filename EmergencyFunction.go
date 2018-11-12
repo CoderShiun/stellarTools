@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/CoderShiun/stellarTools/buildingTransaction"
-	"github.com/CoderShiun/stellarTools/getFromKyeboard"
-	"github.com/CoderShiun/stellarTools/gettingAccountDetails"
+	"stellarTools/buildingTransaction"
+	"stellarTools/getFromKyeboard"
+	"stellarTools/gettingAccountDetails"
 )
 
 func main() {

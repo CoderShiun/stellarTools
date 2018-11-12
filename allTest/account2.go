@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/CoderShiun/stellarTools/buildingTransaction"
-	"github.com/CoderShiun/stellarTools/gettingAccountDetails"
+	"stellarTools/buildingTransaction"
+	"stellarTools/gettingAccountDetails"
 )
 
 var Seed2 = "SCBQ7X2ZYESAYCC2C3V3HMAGLFIW5OGW5MOK4F4N27U7G5HVPJQGZG2P"

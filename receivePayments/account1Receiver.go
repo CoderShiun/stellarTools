@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/CoderShiun/stellarTools/gettingAccountDetails"
+	"stellarTools/gettingAccountDetails"
 	"github.com/stellar/go/clients/horizon"
 )
 

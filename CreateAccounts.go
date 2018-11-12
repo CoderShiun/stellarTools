@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/CoderShiun/stellarTools/changeTrust"
-	"github.com/CoderShiun/stellarTools/setOptions"
+	"stellarTools/changeTrust"
+	"stellarTools/setOptions"
 	"github.com/stellar/go/keypair"
 	"io/ioutil"
 	"log"

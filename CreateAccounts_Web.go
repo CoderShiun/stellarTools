@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/CoderShiun/stellarTools/changeTrust"
-	"github.com/CoderShiun/stellarTools/setOptions"
+	"stellarTools/changeTrust"
+	"stellarTools/setOptions"
 	"github.com/julienschmidt/httprouter"
 	"github.com/rs/cors"
 	"github.com/stellar/go/keypair"
@@ -104,6 +104,7 @@ Get the Seed and Key for account1
 	##############################################################
 	 */
 	// set up the security key for account2
+
 	setOptions.SetSecureMasterKey(account2_PubW, account2_PriW)
 
 

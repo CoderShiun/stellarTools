@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/CoderShiun/stellarTools/getFromKyeboard"
-	"github.com/CoderShiun/stellarTools/gettingAccountDetails"
+	"stellarTools/getFromKyeboard"
+	"stellarTools/gettingAccountDetails"
 )
 
 func main() {

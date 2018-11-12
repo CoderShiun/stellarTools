@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/CoderShiun/stellarTools/createSeed"
-	"github.com/CoderShiun/stellarTools/createTestAccount"
+	"stellarTools/createSeed"
+	"stellarTools/createTestAccount"
 )
 
 func main()  {
